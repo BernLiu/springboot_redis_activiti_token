@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: ActivitiBootDemo
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: hp
+Implementation-Vendor-Id: com.activiti.boot
+Build-Jdk: 1.8.0_191
+Implementation-URL: http://projects.spring.io/spring-boot/ActivitiBoot
+ Demo/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
