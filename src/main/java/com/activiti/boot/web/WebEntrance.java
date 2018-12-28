@@ -17,4 +17,9 @@ public class WebEntrance {
 	private String goIndex() {
 		return "/index";
 	}
+	
+	@GetMapping("/goProcessDetail")
+	private String goProcessDetail() {
+		return "/processDetail";
+	}
 }

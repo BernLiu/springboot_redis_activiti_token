@@ -35,9 +35,6 @@ $(function(){
 	            	sessionStorage.setItem("token", wpoInfo.token);
 	            	window.location.href='/abd/goIndex';
 	            }  
-	        },
-	        success :function(result){
-	        	alert(result);
 	        }
 	    });
 //		$.get("/user/login",postData,function(result){
