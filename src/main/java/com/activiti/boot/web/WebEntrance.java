@@ -22,4 +22,19 @@ public class WebEntrance {
 	private String goProcessDetail() {
 		return "/processDetail";
 	}
+	
+	@GetMapping("/header")
+	private String getHeader() {
+		return "/header";
+	}
+	
+	@GetMapping("/footer")
+	private String getFooter() {
+		return "/footer";
+	}
+	
+	@GetMapping("/goProcessAdd")
+	private String getProcessAdd() {
+		return "/processAdd";
+	}
 }
