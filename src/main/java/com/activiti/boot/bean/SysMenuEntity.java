@@ -1,6 +1,6 @@
 package com.activiti.boot.bean;
 
-public class sys_menu {
+public class SysMenuEntity {
 	private Long menu_id;
 	private Long parent_id;
 	private Long res_id;  //所属资源
