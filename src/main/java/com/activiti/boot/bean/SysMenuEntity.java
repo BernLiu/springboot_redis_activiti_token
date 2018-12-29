@@ -1,16 +1,23 @@
 package com.activiti.boot.bean;
 
-public class SysMenuEntity {
-	private Long menu_id;
-	private Long parent_id;
-	private Long res_id;  //所属资源
+import java.io.Serializable;
+
+public class SysMenuEntity implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
+	private Long menuId;
+	private Long parentId;
+	private Long resId;  //所属资源
 	private String code;  //菜单编码
-	private String name;  //菜单名称
-	private Long system_id; //系统ID
-	private int is_leaf;   //是否末级
-	private String view_path; //页面路径
+	private String menuName;  //菜单名称
+	private Long systemId; //系统ID
+	private int isLeaf;   //是否末级
+	private String viewPath; //页面路径
 	private String icon;
-	private String req_url;
+	private String reqUrl;
 	private String syspertag; //是否系统设项
 	private int menuorder;    //顺序
 	private int isused;      //是否启用
@@ -18,23 +25,23 @@ public class SysMenuEntity {
 	private String remark;  //备注
 	private String sort;	//排序
 	private String wholeName;    //全名
-	public Long getMenu_id() {
-		return menu_id;
+	public Long getMenuId() {
+		return menuId;
 	}
-	public void setMenu_id(Long menu_id) {
-		this.menu_id = menu_id;
+	public void setMenuId(Long menuId) {
+		this.menuId = menuId;
 	}
-	public Long getParent_id() {
-		return parent_id;
+	public Long getParentId() {
+		return parentId;
 	}
-	public void setParent_id(Long parent_id) {
-		this.parent_id = parent_id;
+	public void setParentId(Long parentId) {
+		this.parentId = parentId;
 	}
-	public Long getRes_id() {
-		return res_id;
+	public Long getResId() {
+		return resId;
 	}
-	public void setRes_id(Long res_id) {
-		this.res_id = res_id;
+	public void setResId(Long resId) {
+		this.resId = resId;
 	}
 	public String getCode() {
 		return code;
@@ -42,29 +49,29 @@ public class SysMenuEntity {
 	public void setCode(String code) {
 		this.code = code;
 	}
-	public String getName() {
-		return name;
+	public String getMenuName() {
+		return menuName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setMenuName(String menuName) {
+		this.menuName = menuName;
 	}
-	public Long getSystem_id() {
-		return system_id;
+	public Long getSystemId() {
+		return systemId;
 	}
-	public void setSystem_id(Long system_id) {
-		this.system_id = system_id;
+	public void setSystemId(Long systemId) {
+		this.systemId = systemId;
 	}
-	public int getIs_leaf() {
-		return is_leaf;
+	public int getIsLeaf() {
+		return isLeaf;
 	}
-	public void setIs_leaf(int is_leaf) {
-		this.is_leaf = is_leaf;
+	public void setIsLeaf(int isLeaf) {
+		this.isLeaf = isLeaf;
 	}
-	public String getView_path() {
-		return view_path;
+	public String getViewPath() {
+		return viewPath;
 	}
-	public void setView_path(String view_path) {
-		this.view_path = view_path;
+	public void setViewPath(String viewPath) {
+		this.viewPath = viewPath;
 	}
 	public String getIcon() {
 		return icon;
@@ -72,11 +79,11 @@ public class SysMenuEntity {
 	public void setIcon(String icon) {
 		this.icon = icon;
 	}
-	public String getReq_url() {
-		return req_url;
+	public String getReqUrl() {
+		return reqUrl;
 	}
-	public void setReq_url(String req_url) {
-		this.req_url = req_url;
+	public void setReqUrl(String reqUrl) {
+		this.reqUrl = reqUrl;
 	}
 	public String getSyspertag() {
 		return syspertag;
@@ -120,4 +127,6 @@ public class SysMenuEntity {
 	public void setWholeName(String wholeName) {
 		this.wholeName = wholeName;
 	}
+	
+	
 }

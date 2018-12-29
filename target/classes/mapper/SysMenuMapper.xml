@@ -2,13 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.activiti.boot.dao.SysMenuRepository">
 	<resultMap id="BaseResultMap" type="com.activiti.boot.bean.SysMenuEntity">
-		<result column="id" property="id" />
-		<result column="username" property="username" />
-		<result column="password" property="password" />
+		<result column="menu_id" property="menuId" />
+		<result column="parent_id" property="parentId" />
+		<result column="res_id" property="resId" />
+		<result column="code" property="code" />
+		<result column="menu_name" property="menuName" />
+		<result column="system_id" property="systemId" />
+		<result column="is_leaf" property="isLeaf" />
+		<result column="view_path" property="viewPath" />
+		<result column="icon" property="icon" />
+		<result column="req_url" property="reqUrl" />
+		<result column="syspertag" property="syspertag" />
+		<result column="menuorder" property="menuorder" />
+		<result column="is_used" property="isUsed" />
+		<result column="module_type" property="moduleType" />
+		<result column="remark" property="remark" />
+		<result column="sort" property="sort" />
+		<result column="wholeName" property="wholeName" />
 	</resultMap>
 	
 	<sql id="Base_Column_List">
-		id, username, password
+		menu_id, parent_id, res_id,code,menu_name,system_id,is_leaf,view_path,icon,req_url,syspertag,menuorder,is_used,module_type,remark,
+		sort,wholeName
 	</sql>
 
 	
