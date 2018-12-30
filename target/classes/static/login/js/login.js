@@ -32,9 +32,10 @@ $(function(){
 	                "token" : xhr.getResponseHeader('token')
 	            };
 	            if(wpoInfo.token!= null){
-	            	sessionStorage.setItem("token", wpoInfo.token);
-	            	window.location.href='/abd/goIndex';
-	            }  
+	           	sessionStorage.setItem("token", wpoInfo.token);
+	            //	alert(strToBase64('goIndex'));
+	            	window.location.href='/abd?reqUrlParam=goIndex';
+	         }  
 	        }
 	    });
 //		$.get("/user/login",postData,function(result){

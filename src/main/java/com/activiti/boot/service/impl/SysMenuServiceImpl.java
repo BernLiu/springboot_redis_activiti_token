@@ -1,18 +1,21 @@
 package com.activiti.boot.service.impl;
 
-import java.util.Map;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.activiti.boot.dao.SysMenuRepository;
 import com.activiti.boot.service.SysMenuService;
 
-@Service
+@Service("SysMenuService")
 public class SysMenuServiceImpl implements SysMenuService {
+	
+	@Autowired
+	private SysMenuRepository sysMenuRepository;
 
 	@Override
-	public Map<String, Object> getViewUrl(String param) {
-		// TODO Auto-generated method stub
-		return null;
+	public String getViewPathByReqUrl(String reqUrl) {
+		
+		return sysMenuRepository.getViewPathByReqUrl(reqUrl);
 	}
 
 }

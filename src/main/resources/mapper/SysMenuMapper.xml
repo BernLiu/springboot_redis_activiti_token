@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.activiti.boot.dao.SysMenuRepository">
-	<resultMap id="BaseResultMap" type="com.activiti.boot.bean.SysMenuEntity">
+	<resultMap id="BaseResultMapMenu" type="com.activiti.boot.bean.SysMenuEntity">
 		<result column="menu_id" property="menuId" />
 		<result column="parent_id" property="parentId" />
 		<result column="res_id" property="resId" />
@@ -21,10 +21,13 @@
 		<result column="wholeName" property="wholeName" />
 	</resultMap>
 	
-	<sql id="Base_Column_List">
+	<!-- <sql id="Base_Column_List">
 		menu_id, parent_id, res_id,code,menu_name,system_id,is_leaf,view_path,icon,req_url,syspertag,menuorder,is_used,module_type,remark,
 		sort,wholeName
 	</sql>
-
+ -->
+	<select id="getViewPathByReqUrl" parameterType="String" resultType="String">
+		select view_path from sys_menu where req_url=#{reqUrl}
+	</select>
 	
 </mapper>

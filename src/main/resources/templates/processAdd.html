@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Add</title>
+    <link rel="stylesheet" href="/common/css/roboto.css" />
+    <link rel="stylesheet" href="/common/css/fontawesome.min.css"/>
+    <link rel="stylesheet" href="/bootstrap-4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/bootstrap-4.2.1/css/fileinput.min.css"/>
+    <link rel="stylesheet" href="/common/css/templatemo-style.css"/>
+    
+  </head>
+
+  <body>
+    <!-- header -->
+    <header id="headerpage"></header>
+    
+    <div class="container tm-mt-big tm-mb-big">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 col-md-12 col-sm-12 mx-auto">
+          <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+            <div class="row">
+              <div class="col-12">
+                <h2 class="tm-block-title d-inline-block">Add Product</h2>
+              </div>
+            </div>
+            <!-- 上传区域 -->
+            <div class="row tm-edit-product-row">
+              <div class="col-xl-6 col-lg-6 col-md-12">
+                  <div class="form-group mb-3">
+                    <label  for="name" >Product Name</label>
+                    <input id="name"  name="name" type="text" class="form-control validate" required="required" />
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="description">Description</label>
+                    <textarea class="form-control validate"  rows="3" required="required" ></textarea>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label  for="category">Category</label>
+                    <select class="custom-select tm-select-accounts" id="category">
+	                      <option selected ="selected">Select category</option>
+	                      <option value="1">New Arrival</option>
+	                      <option value="2">Most Popular</option>
+	                      <option value="3">Trending</option>
+                    </select>
+                  </div>
+                  <div class="row">
+                      <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label  for="expire_date">Expire Date</label>
+                          <input id="expire_date" name="expire_date" type="text"  class="form-control validate" data-large-mode="true"/>
+                        </div>
+                        <div class="form-group mb-3 col-xs-12 col-sm-6">
+                          <label for="stock">Units In Stock </label>
+                          <input  id="stock"  name="stock"  type="text" class="form-control validate" required="required"/>
+                        </div>
+                  </div>
+              </div>
+               <div class="col-xl-6 col-lg-6 col-md-12 mx-auto mb-4">   
+                  <input id="fileUpload" type="file" class="file" data-preview-file-type="text" multiple="multiple" />
+              </div> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   <form></form>
+   <!--footer-->  
+   <footer id="footerpage"></footer>
+
+    <script type="text/javascript"   src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript"   src="/common/js/moment.min.js"></script>
+    <script type="text/javascript"	 src="/bootstrap-4.2.1/js/bootstrap.min.js"></script>
+   <!--  <script type="text/javascript"	 src="/bootstrap-4.2.1/js/fileinput.min.js"></script> -->
+    <script type="text/javascript"	 src="/bootstrap-4.2.1/js/fileinput.js"></script>
+    <script type="text/javascript"	 src="/bootstrap-4.2.1/js/piexif.min.js"></script>
+    <script type="text/javascript"	 src="/bootstrap-4.2.1/js/popper.min.js"></script>
+    <script type="text/javascript"	 src="/bootstrap-4.2.1/js/sortable.min.js"></script>
+    <script type="text/javascript"	 src="/bootstrap-4.2.1/js/theme.js"></script>
+    <script type="text/javascript"	 src="/bootstrap-4.2.1/js/zh.js"></script>
+    <script type="text/javascript"   src="/common/js/tooplate-scripts.js"></script>
+    <script type="text/javascript"   src="/common/js/common.js"></script>
+    <script type="text/javascript"   src="/processAdd/js/processAdd.js"></script>
+  </body>
+</html>
