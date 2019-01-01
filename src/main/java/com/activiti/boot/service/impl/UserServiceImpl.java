@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.activiti.boot.bean.UserEntity;
-import com.activiti.boot.dao.UserRepository;
+import com.activiti.boot.dao.sys.UserRepository;
 import com.activiti.boot.service.UserService;
 
 @Service("UserService")

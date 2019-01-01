@@ -1,4 +1,4 @@
-package com.activiti.boot.dao;
+package com.activiti.boot.dao.sys;
 
 import com.activiti.boot.bean.UserEntity;
 

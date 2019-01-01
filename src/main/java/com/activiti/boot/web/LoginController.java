@@ -13,12 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.activiti.boot.bean.UserEntity;
 import com.activiti.boot.service.UserService;
-import com.activiti.boot.token.aiinterface.UserLoginToken;
 import com.activiti.boot.token.build.TokenService;
 import com.activiti.boot.utils.RedisUtil;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/abd/sys")
 public class LoginController {
 	
 	@Autowired
@@ -56,28 +55,19 @@ public class LoginController {
 		}
 	}
 	
-	@RequestMapping("/getMessage")
+	@GetMapping("/getMessage")
     private Map<String, Object> getMessage(HttpServletRequest request){
 		Map<String, Object> map =new HashMap<String, Object>();
 		String redisToken = String.valueOf(redisUtil.get("token"));
 		String token = request.getHeader("X_token");
 		if(redisToken==null || "".equals(redisToken) || token==null || "".equals(token)) {
-			map.put("SUCCESS", false);
-			map.put("MESSAGE", "请求超时,请重新登陆");
-			 return map;
+			response.setStatus(401);
+			return map;
 		}
-		if(redisToken.equals(token)) {
-			String parameter = request.getParameter("message");
-			map.put("SUCCESS", true);
-			map.put("MESSAGE", parameter);
-	        return map;
-		}
-		map.put("SUCCESS", false);
-		map.put("MESSAGE", "请求失败");
 		return map;
     }
     
-    @RequestMapping("/logout")
+    @GetMapping("/logout")
     private Map<String, Object> logout(HttpServletRequest request){
     	Map<String, Object> map =new HashMap<String, Object>();
     	boolean hasKey = redisUtil.hasKey("token");

@@ -6,7 +6,7 @@ $(function(){
 		});
 		$.ajax({
 	        type: 'HEAD', // 获取头信息，type=HEAD即可
-	        url : "/user/login",
+	        url : "/abd/sys/login",
 	        data:postData,
 	        complete: function( xhr,data ){
 	            // 获取相关Http Response header

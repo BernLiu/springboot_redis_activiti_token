@@ -3,7 +3,7 @@ package com.activiti.boot.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.activiti.boot.dao.SysMenuRepository;
+import com.activiti.boot.dao.sys.SysMenuRepository;
 import com.activiti.boot.service.SysMenuService;
 
 @Service("SysMenuService")

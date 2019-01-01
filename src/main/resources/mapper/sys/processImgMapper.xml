@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.activiti.boot.dao.ProcessImgRepository">
+<mapper namespace="com.activiti.boot.dao.sys.ProcessImgRepository">
 	<resultMap id="BaseResultMap" type="com.activiti.boot.bean.ProcessImgEntity">
 		<result column="img_id" property="imgId" />
 		<result column="img_name" property="imgName" />
@@ -16,7 +16,7 @@
 	</resultMap>
 	
 	<sql id="Base_Column_List">
-		img_id, img_name, process_id,img_content,create_time,update_time,create_user,update_user,isused,status,remark
+		 img_name, process_id,img_content,create_time,update_time,create_user,update_user,isused,status,remark
 	</sql>
 	<!-- 新增返回主键 -->
 	<insert id="saveProcessImg" parameterType="com.activiti.boot.bean.ProcessImgEntity">
@@ -26,6 +26,6 @@
         insert into process_img (
 			<include refid="Base_Column_List"/>
 		) 
-        values (null,#{imgName},#{processId},#{imgContent},#{createTime},#{createTime},#{updateTime},#{createUser},#{updateUser},#{isused},#{status},#{remark})
+        values (#{imgName},#{processId},#{imgContent},#{createTime},#{createTime},#{updateTime},#{createUser},#{updateUser},#{isused},#{status},#{remark})
     </insert>
 </mapper>

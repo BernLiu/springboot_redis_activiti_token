@@ -4378,7 +4378,7 @@
         cancelClass: 'btn btn-default btn-secondary',
         uploadIcon: '<i class="glyphicon glyphicon-upload"></i>',
         uploadClass: 'btn btn-default btn-secondary',
-        uploadUrl: '/abd/fileupload/commonfileupload',
+        uploadUrl: '',
         uploadUrlThumb: null,
         uploadAsync: true,
         uploadExtraData: {},
