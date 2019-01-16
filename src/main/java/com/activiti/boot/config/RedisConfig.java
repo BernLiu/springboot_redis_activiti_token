@@ -24,6 +24,9 @@ public class RedisConfig {
 	@Value("${redis.port}")
     private String port;
 	
+	@Value("${redis.password}")
+	private String password;
+	
 	@Value("${redis.maxIdle}")
     private Integer maxIdle;
 
@@ -47,7 +50,6 @@ public class RedisConfig {
 
     @Value("${redis.testWhileIdle}")
     private boolean testWhileIdle;
-
 
 //    @Value("${spring.redis.cluster.nodes}")
 //    private String clusterNodes; 
@@ -100,7 +102,7 @@ public class RedisConfig {
         //端口号  
         JedisConnectionFactory.setPort(Integer.parseInt(port));  
         //如果Redis设置有密码  
-        //JedisConnectionFactory.setPassword(password);  
+        JedisConnectionFactory.setPassword(password); 
         //客户端超时时间单位是毫秒  
         JedisConnectionFactory.setTimeout(1000*60*60*24);  
         return JedisConnectionFactory; 
